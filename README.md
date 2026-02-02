@@ -1,1 +1,1 @@
-# terraform-modules-aws-lambda-at-edge-cognito-authorizer
+# AWS Lambda at Edge Cognito Authorizer Terraform Module
