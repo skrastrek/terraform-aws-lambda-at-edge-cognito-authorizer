@@ -6,7 +6,8 @@ resource "aws_iam_role" "this" {
 }
 
 module "assume_role_policy_document" {
-  source = "github.com/skrastrek/terraform-modules-aws-iam//policy-document/service-assume-role?ref=v0.2.0"
+  source  = "skrastrek/iam/aws//modules/policy-document/service-assume-role"
+  version = "1.0.0"
 
   service_identifiers = ["lambda.amazonaws.com", "edgelambda.amazonaws.com"]
 }
@@ -17,7 +18,8 @@ resource "aws_iam_role_policy_attachment" "aws_lambda_basic_execution_role" {
 }
 
 module "config_secrets_manager_secret_read" {
-  source = "github.com/skrastrek/terraform-modules-aws-iam//role-policy/secretsmanager-secret-read?ref=v0.2.0"
+  source  = "skrastrek/iam/aws//modules/role-policy/secretsmanager-secret-read"
+  version = "1.0.0"
 
   role_name   = aws_iam_role.this.name
   policy_name = "config-secret-read"
