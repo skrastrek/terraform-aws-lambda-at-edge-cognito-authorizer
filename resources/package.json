@@ -7,10 +7,10 @@
     "cognito-at-edge": "^1.5.4"
   },
   "devDependencies": {
-    "@aws-sdk/client-secrets-manager": "^3.980.0",
-    "@types/aws-lambda": "^8.10.160",
-    "@types/node": "^25.1.0",
-    "esbuild": "^0.27.2"
+    "@aws-sdk/client-secrets-manager": "^3.1000.0",
+    "@types/aws-lambda": "^8.10.161",
+    "@types/node": "^25.3.3",
+    "esbuild": "^0.27.3"
   },
   "scripts": {
     "build": "esbuild src/index.ts --bundle --minify --platform=node --target=node24 --outdir=dist"
